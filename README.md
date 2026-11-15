@@ -2,6 +2,8 @@
 
 Projeto do MBA — Software Engineering Project · Bootcamp.
 
+Repositório: [StrikerNCV/contract-analyzer](https://github.com/StrikerNCV/contract-analyzer) · [Execuções da CI](https://github.com/StrikerNCV/contract-analyzer/actions).
+
 **Proposta:** envie um contrato em PDF e receba uma síntese das cláusulas, obrigações, multas e pontos de atenção, com trechos e páginas para conferir no original.
 
 **Fase:** preparação do checkpoint 02 — Produto. Documentação v1 elaborada para revisão do POD; discovery com usuários ainda pendente. O MVP ainda não está implementado.
@@ -51,11 +53,13 @@ npm run eval -- --predictions caminho/para/previsoes.json
 
 O primeiro comando confere artefatos, links locais e dados de avaliação. O segundo compara previsões reais com o conjunto sintético; sem previsões ele falha, evitando divulgar uma taxa de acerto inventada. Não há análise de PDF nem chamada a modelo nesta entrega.
 
+Se `npm` não estiver disponível, use `node scripts/check.mjs` e `node evals/evaluate.mjs --predictions caminho/para/previsoes.json`.
+
 ## Governança e checkpoints
 
 - Trabalhar em branches e integrar por PR com revisão de outro integrante e CI verde; ver [CONTRIBUTING.md](CONTRIBUTING.md).
 - Ativar proteção remota da `main` conforme [guia de configuração](docs/repositorio.md). A existência deste arquivo não ativa a proteção.
-- Usar tags `checkpoint-01` a `checkpoint-06` no commit efetivamente entregue. Não criar tags retroativas para simular uma entrega anterior.
+- Usar tags `checkpoint-01` a `checkpoint-06` para registrar o estado real de cada entrega. `checkpoint-02` registra esta preparação v1 com discovery e aceite do POD pendentes. Não criar tags retroativas para simular uma entrega anterior.
 - [Diário do checkpoint 02](docs/diario/checkpoint-02.md) registra esta preparação e suas pendências.
 
 ## MVP e demonstração

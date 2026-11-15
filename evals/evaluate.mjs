@@ -1,5 +1,6 @@
 import { readFileSync } from 'node:fs';
-import { fileURLToPath } from 'node:url';
+import { fileURLToPath, pathToFileURL } from 'node:url';
+import { resolve } from 'node:path';
 
 export const normalize = value => value.replace(/\s+/g, ' ').trim();
 const categories = new Set(['obligation', 'penalty', 'attention']);
@@ -39,7 +40,7 @@ export function evaluate(dataset, predictions) {
     tp, fp, fn, findings: total, precision, recall, sourceValidity,
     passed: precision >= 0.9 && recall >= 0.8 && sourceValidity === 1 };
 }
-if (process.argv[1] && fileURLToPath(import.meta.url) === fileURLToPath(new URL(`file:///${process.argv[1].replaceAll('\\', '/').replace(/^\//, '')}`))) {
+if (process.argv[1] && import.meta.url === pathToFileURL(resolve(process.argv[1])).href) {
   try {
     const args = process.argv.slice(2);
     if (args[0] !== '--predictions' || !args[1]) throw new Error('Uso: npm run eval -- --predictions caminho/previsoes.json. Sem previsões reais, não há taxa de acerto.');

@@ -3,6 +3,7 @@
 ## Preparado nesta sessão
 
 - [x] Nome e proposta do Contract Analyzer.
+- [x] Nomes dos três integrantes no README; papéis propostos para confirmação.
 - [x] Estrutura do repositório e AGENTS.md v0.
 - [x] Problema, persona e hipótese explicitamente provisórios.
 - [x] Lean Canvas e AI Canvas v1.
@@ -13,12 +14,13 @@
 
 ## Ainda precisa de pessoas ou acesso
 
-- [ ] Confirmar nomes e papéis dos três integrantes no README.
+- [ ] Confirmar distribuição dos papéis dos três integrantes no README.
 - [ ] Coletar e registrar evidências de discovery; plano não é evidência de entrevista.
 - [ ] Revisar e aceitar o PRD com o POD; confirmar os seis pilares exigidos pela rubrica.
-- [ ] Criar remoto, enviar commits, verificar CI e ativar proteção da main.
+- [x] Criar remoto e enviar a base; CI inicial executada com sucesso.
+- [ ] Conferir configuração final de proteção da main nas Settings do GitHub.
 - [ ] Informar usuários do POD/professor para convites autorizados.
-- [ ] Criar tag checkpoint-02 no commit entregue após revisão.
+- [ ] Confirmar que o snapshot checkpoint-02 é o estado desejado para submissão, incluindo as pendências declaradas.
 - [ ] Confirmar prazo e submissão no Classroom; nenhuma submissão foi realizada por esta preparação.
 
 ## Apresentação curta para a aula

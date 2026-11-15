@@ -1,19 +1,20 @@
 # Configuração do repositório remoto
 
-Estado inicial: repositório local preparado; criação remota, push e proteção devem ser verificados separadamente. Não armazenar tokens neste projeto.
+Remoto criado: https://github.com/StrikerNCV/contract-analyzer. Base enviada e primeira CI concluída com sucesso em 2026-11-15. Visibilidade pública autorizada expressamente pelo usuário para permitir proteção de branch no plano disponível. Não armazenar tokens neste projeto.
 
 ## GitHub
 
-Criar `contract-analyzer` na conta ou organização do POD, inicialmente privado. Caso a conta não permita proteção em repositório privado, discutir visibilidade/plano com o POD; não publicar dados privados para contornar a limitação.
+O repositório foi criado inicialmente privado. A interface informou que a proteção não seria aplicada nesse plano; o usuário autorizou torná-lo público. Não há contratos reais ou credenciais no projeto. Novos documentos devem respeitar a visibilidade pública.
 
-Após autenticar e criar o remoto vazio:
+Para clonar em outro computador:
 
 ```sh
-git remote add origin https://github.com/SEU_USUARIO/contract-analyzer.git
-git push -u origin main
+git clone https://github.com/StrikerNCV/contract-analyzer.git
+cd contract-analyzer
+node scripts/check.mjs
 ```
 
-Substitua o endereço pelo remoto real. Se já existir `origin`, confira antes de alterar.
+O checkout criado nesta preparação já possui `origin` configurado.
 
 ## Proteção da main
 
@@ -30,8 +31,8 @@ Verificar o resultado na interface e registrar no diário. CI configurada em YAM
 ## Tags
 
 ```sh
-git tag -a checkpoint-02 -m "Checkpoint 02: produto revisado pelo POD"
+git tag -a checkpoint-02 -m "Checkpoint 02: preparacao de produto v1; discovery e aceite do POD pendentes"
 git push origin checkpoint-02
 ```
 
-Executar somente no commit efetivamente aceito para entrega. `checkpoint-01` não deve ser criada retroativamente como evidência de uma aula anterior. A data/horário dos slides é referência da disciplina; confirmar o prazo real no Classroom.
+A tag registra um snapshot e não atesta entrevistas ou revisão humana. Na preparação, seu conteúdo é a v1 e suas pendências explícitas. Depois de atualizações, preservar a tag original e combinar com o professor uma nova versão de entrega em vez de reescrever a evidência. `checkpoint-01` não deve ser criada retroativamente como evidência de uma aula anterior. Confirmar o prazo real no Classroom.
